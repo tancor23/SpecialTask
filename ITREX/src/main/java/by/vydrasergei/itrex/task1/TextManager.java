@@ -30,7 +30,7 @@ public class TextManager {
      * Static method inputConsole allows you to output text in the console.
      */
     public static void outputConsole(String text) {
-        System.out.print("Result is " + text +"\\");
+        System.out.print("Result is: \"" + text +"\"");
     }
 
     /**
@@ -40,5 +40,6 @@ public class TextManager {
         PrintWriter out = new PrintWriter(new File("src/main/resources/output.txt"));
         out.print(text);
         out.close();
+        System.out.println("The text was written in the file(output.txt)");
     }
 }

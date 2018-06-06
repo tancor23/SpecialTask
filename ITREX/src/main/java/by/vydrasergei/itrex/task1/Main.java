@@ -57,7 +57,6 @@ public class Main {
                 switch (numberOut) {
                     case 1:
                         TextManager.outputFile(text);
-                        System.out.println("The text was written in a file(output.txt)");
                         booleanRepeatOutputText = false;
                         break;
                     case 2:

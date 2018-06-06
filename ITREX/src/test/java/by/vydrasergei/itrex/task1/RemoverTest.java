@@ -15,7 +15,6 @@ public class RemoverTest {
      * Method executeTest checks 2 parameters(text(before editing) and result(after)).
      * Worlds and phrases for testing were taken from the original source.
      */
-
     @Test
     public void executeTest() {
 

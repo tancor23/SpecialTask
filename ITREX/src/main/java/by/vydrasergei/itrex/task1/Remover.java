@@ -27,6 +27,9 @@ public class Remover {
         return stringBuilder.toString();
     }
 
+    /**
+     * Method replaceSequence(helper for removeLetterC method) does the replace the sequence.
+     */
     public static void replaceSequence(int start, int end, String foundSequence, StringBuilder stringBuilder) {
         String replaceSymbols;
         switch (foundSequence) {
@@ -44,6 +47,8 @@ public class Remover {
 
     /**
      * Method removeDoubleLetter replaces symbols(ee and oo) to (i and u) accordingly and other double letters by one.
+     * Inline flag(?i) means the next expression is case insensitive. (.) means any character. $1 refers to the first
+     * regex(.).
      */
     public static String removeDoubleLetter(String text) {
         String lastTextValue = "";
@@ -59,11 +64,12 @@ public class Remover {
 
     /**
      * Method removeLetterC removes letter 'e' in the end of each word if word length > 1.
-     * Inline flag(?i) means the next expression is case insensitive.
+     * Inline flag(?i) means the next expression is case insensitive. (\b\s*) means the current method will
+     * work when the letter 'e' is in the end of each word if word length > 1.
      */
     public static String removeLetterE(String text) {
-        text = text.replaceAll("(?i)e(?!\\S)", "");
-        return text;
+        text = text.replaceAll("(?i)e(\\b\\s*)", " ");
+        return text.trim();
     }
 
     /**
