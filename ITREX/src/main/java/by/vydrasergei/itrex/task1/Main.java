@@ -1,5 +1,7 @@
 package by.vydrasergei.itrex.task1;
 
+import by.vydrasergei.itrex.task1.impl.RemoverImpl;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -8,7 +10,6 @@ import java.io.InputStreamReader;
  * @author Vydra_Sergei
  * Class Main is main class in this prodramm which links other classes and where all events occur.
  */
-
 public class Main {
     public static void main(String[] args) {
         String text = "";
@@ -43,7 +44,7 @@ public class Main {
             }
         }
 
-        Remover result = new Remover();
+        Remover result = new RemoverImpl();
         text = result.removeArticles(text);
         text = result.removeLetterC(text);
         text = result.removeDoubleLetter(text);
